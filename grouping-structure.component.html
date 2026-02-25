@@ -1,0 +1,84 @@
+<div class="esr-container">
+    <div class="esr-header">
+        <h2 class="esr-title">Grouping Structure Processing</h2>
+    </div>
+
+    <div class="esr-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar-menu">
+                    <div class="menu-section">
+                        <div class="menu-header">Category Maintenance</div>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a [routerLink]="['/esr/category-data']">Category Data</a>
+                            </li>
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a [routerLink]="['/esr/category-structure']">Category Structure</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section">
+                        <div class="menu-header">Grouping Maintenance</div>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a [routerLink]="['/esr/grouping-data']">Grouping Data</a>
+                            </li>
+                            <li class="menu-item active">
+                                <span class="menu-arrow">▸</span>
+                                <a href="javascript:void(0)">Grouping Structure</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section">
+                        <div class="menu-header">Default Site Code</div>
+                        <ul class="menu-list">
+                            <li class="menu-item site-code-display">
+                                00000
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="form-container">
+                    <form [formGroup]="groupingStructureForm" (ngSubmit)="onSubmit()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="groupingCode">Grouping Code</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="groupingCode" 
+                                       formControlName="groupingCode"
+                                       placeholder="Enter grouping code">
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <p class="info-text">Please enter full or part details</p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" 
+                                    class="btn btn-danger btn-action" 
+                                    (click)="onContinue()">
+                                Continue
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-secondary btn-action" 
+                                    (click)="onFind()">
+                                Find
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

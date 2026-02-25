@@ -1,0 +1,171 @@
+<div class="esr-container">
+    <div class="esr-header">
+        <h2 class="esr-title">Grouping Data Processing</h2>
+    </div>
+
+    <div class="esr-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar-menu">
+                    <div class="menu-section">
+                        <div class="menu-header">Category Maintenance</div>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a [routerLink]="['/esr/category-data']">Category Data</a>
+                            </li>
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a [routerLink]="['/esr/category-structure']">Category Structure</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section">
+                        <div class="menu-header">Grouping Maintenance</div>
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <span class="menu-arrow">▸</span>
+                                <a href="javascript:void(0)">Grouping Data</a>
+                            </li>
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a [routerLink]="['/esr/grouping-structure']">Grouping Structure</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section">
+                        <div class="menu-header">Default Site Code</div>
+                        <ul class="menu-list">
+                            <li class="menu-item site-code-display">
+                                00000
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="form-container">
+                    <form [formGroup]="groupingDataForm" (ngSubmit)="onSubmit()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="groupingCode">Grouping Code</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="groupingCode" 
+                                       formControlName="groupingCode"
+                                       placeholder="Enter grouping code">
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <p class="info-text">Please enter full or part details</p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" 
+                                    class="btn btn-danger btn-action" 
+                                    (click)="onContinue()">
+                                Continue
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-secondary btn-action" 
+                                    (click)="onFind()">
+                                Find
+                            </button>
+                        </div>
+
+                        <div class="form-row mt-4">
+                            <div class="form-group col-md-4">
+                                <label for="groupingSite">Grouping Site</label>
+                                <select class="form-control" 
+                                        id="groupingSite" 
+                                        formControlName="groupingSite">
+                                    <option value="00000">00000</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="asAtDate">As at Date <span class="date-format">(DD/MM/YYYY)</span></label>
+                                <div class="input-group">
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="asAtDate" 
+                                           formControlName="asAtDate"
+                                           placeholder="DD/MM/YYYY"
+                                           [value]="currentDate">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar-btn" 
+                                                type="button"
+                                                (click)="openDatePicker()">
+                                            📅
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="categorySite">Category Site</label>
+                                <select class="form-control" 
+                                        id="categorySite" 
+                                        formControlName="categorySite">
+                                    <option value="00000">00000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="categoryCode">Category Code</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="categoryCode" 
+                                       formControlName="categoryCode"
+                                       readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="categoryKey">Category Key</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="categoryKey" 
+                                       formControlName="categoryKey"
+                                       readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <p class="info-text">Please enter full details</p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" 
+                                    class="btn btn-danger btn-action"
+                                    (click)="onJunior()">
+                                Junior
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-danger btn-action"
+                                    (click)="onSenior()">
+                                Senior
+                            </button>
+                        </div>
+
+                        <div class="info-section" *ngIf="showJuniorInfo">
+                            <p class="info-message">Returns Junior Grouping data where specified Grouping Details exist at a Junior Category.</p>
+                        </div>
+
+                        <div class="info-section" *ngIf="showSeniorInfo">
+                            <p class="info-message">Returns Senior Grouping data where specified Grouping Details exist at a Junior Category.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

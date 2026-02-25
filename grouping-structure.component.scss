@@ -1,0 +1,182 @@
+@import '../../../variables.scss';
+
+.esr-container {
+    background-color: $light-grey;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+}
+
+.esr-header {
+    background-color: $white;
+    color: $charcoal;
+    padding: 15px 20px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 0;
+    border-bottom: 1px solid $border-grey;
+}
+
+.esr-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: $charcoal;
+}
+
+.esr-content {
+    background: $white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu {
+    background: $white;
+    border: 1px solid $border-grey;
+    border-radius: 0;
+    padding: 0;
+    margin-right: 15px;
+
+    .menu-section {
+        border-bottom: 1px solid $border-grey;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .menu-header {
+        background-color: $dark-slate;
+        color: $white;
+        padding: 10px 15px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        padding: 8px 15px;
+        border-bottom: 1px solid $light-grey;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: $light-grey;
+        }
+
+        &.active {
+            background-color: $light-grey;
+        }
+
+        .menu-arrow {
+            margin-right: 8px;
+            color: $charcoal;
+            font-size: 12px;
+        }
+
+        a {
+            color: $charcoal;
+            text-decoration: none;
+            flex: 1;
+        }
+    }
+
+    .site-code-display {
+        background-color: $light-grey;
+        font-weight: bold;
+        text-align: center;
+        justify-content: center;
+        padding: 15px;
+        border-top: 1px solid $border-grey;
+    }
+}
+
+.form-container {
+    background: $white;
+    padding: 20px;
+    border: 1px solid $border-grey;
+    border-radius: 4px;
+
+    .form-group {
+        label {
+            font-weight: 600;
+            color: $charcoal;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .form-control {
+        border: 1px solid $border-grey;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 14px;
+
+        &:focus {
+            border-color: $primary;
+            box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+        }
+    }
+
+    .form-info {
+        background-color: $light-grey;
+        border: 1px solid $border-grey;
+        padding: 10px 15px;
+        margin: 15px 0;
+        border-radius: 0;
+
+        .info-text {
+            margin: 0;
+            color: $secondary-text;
+            font-size: 13px;
+        }
+    }
+
+    .form-actions {
+        margin: 20px 0;
+        display: flex;
+        gap: 10px;
+
+        .btn-action {
+            padding: 8px 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .btn-danger {
+            background-color: $primary;
+            color: $white;
+
+            &:hover {
+                background-color: darken($primary, 10%);
+            }
+        }
+
+        .btn-secondary {
+            background-color: $secondary-default;
+            color: $white;
+
+            &:hover {
+                background-color: $secondary-hover;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-menu {
+        margin-bottom: 20px;
+    }
+}
