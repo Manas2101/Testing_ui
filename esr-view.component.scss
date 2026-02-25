@@ -1,0 +1,108 @@
+@import '../../../variables.scss';
+
+.container-fluid {
+    padding: 0;
+    background-color: $dark-slate;
+
+    @media(min-width: 960px) {
+        .navDiv {
+            max-width: 1280px;
+            margin: 0 auto;
+            height: 70px;
+
+            .nav-div {
+                margin: 18px 0px;
+                padding: 0px 37px;
+
+                .title {
+                    font-size: 26px;
+                    font-family: $font-univers-next;
+                    font-weight: 500;
+                    line-height: 1.31;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.container-fluid {
+    background-color: $dark-slate;
+
+    .row {
+        margin: 0;
+
+        .col-12 {
+            padding: 0;
+
+            &.content-div {
+                background-color: $dark-slate;
+
+                @media(min-width: 960px) {
+                    .content {
+                        .nav-tabs {
+                            max-width: 1280px;
+                            margin: 0 auto;
+                            border-bottom: none;
+
+                            li.nav-item {
+                                &:first-child {
+                                    margin-left: 50px;
+                                }
+
+                                .nav-link {
+                                    border-radius: 0;
+                                    padding: 10px 35px 12px 35px;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    letter-spacing: 0;
+                                    line-height: 18px;
+                                    text-align: center;
+                                    color: $white;
+                                    background-color: $secondary-hover;
+                                    border: 0;
+
+                                    &.active {
+                                        color: $charcoal;
+                                        border-top: 3px solid $primary !important;
+                                        background-color: $white;
+
+                                        &:hover {
+                                            background-color: $white;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background-color: $secondary-default;
+                                    }
+
+                                    &:active {
+                                        background-color: $corporate-slate;
+                                    }
+                                }
+                            }
+                        }
+
+                        .tab-content {
+                            background-color: $white;
+                            color: $charcoal;
+                            font-size: 14px;
+                            letter-spacing: 0;
+                            line-height: 18px;
+
+                            .tab-c {
+                                max-width: 1280px;
+                                margin: 0 auto;
+                                padding: 0px 10px;
+
+                                .navbar {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CategoryDataComponent implements OnInit {
   categoryForm: FormGroup;
-  currentDate: string;
+  currentDate: string = '';
 
   constructor(private fb: FormBuilder) {
     this.categoryForm = this.fb.group({
