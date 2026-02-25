@@ -1,0 +1,154 @@
+<div class="esr-container">
+    <div class="esr-header">
+        <h2 class="esr-title">Category Data Processing</h2>
+    </div>
+
+    <div class="esr-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar-menu">
+                    <div class="menu-section">
+                        <div class="menu-header">Category Maintenance</div>
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <span class="menu-arrow">▸</span>
+                                <a href="javascript:void(0)">Category Data</a>
+                            </li>
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a href="javascript:void(0)">Category Structure</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section">
+                        <div class="menu-header">Grouping Maintenance</div>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a href="javascript:void(0)">Grouping Data</a>
+                            </li>
+                            <li class="menu-item">
+                                <span class="menu-arrow">▸</span>
+                                <a href="javascript:void(0)">Grouping Structure</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-section">
+                        <div class="menu-header">Default Site Code</div>
+                        <ul class="menu-list">
+                            <li class="menu-item site-code-display">
+                                00001
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="form-container">
+                    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="categoryCode">Category Code</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="categoryCode" 
+                                       formControlName="categoryCode"
+                                       placeholder="Enter category code">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="categoryBusinessName">Category Business Name</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="categoryBusinessName" 
+                                       formControlName="categoryBusinessName"
+                                       placeholder="Enter business name">
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <p class="info-text">Please enter full or part details in either box</p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" 
+                                    class="btn btn-danger btn-action" 
+                                    (click)="onContinue()">
+                                Continue
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-secondary btn-action" 
+                                    (click)="onFind()">
+                                Find
+                            </button>
+                        </div>
+
+                        <div class="form-row mt-4">
+                            <div class="form-group col-md-4">
+                                <label for="categorySite">Category Site</label>
+                                <select class="form-control" 
+                                        id="categorySite" 
+                                        formControlName="categorySite">
+                                    <option value="00001">00001</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="asAtDate">As at Date <span class="date-format">(DD/MM/YYYY)</span></label>
+                                <div class="input-group">
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="asAtDate" 
+                                           formControlName="asAtDate"
+                                           placeholder="DD/MM/YYYY"
+                                           [value]="currentDate">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar-btn" 
+                                                type="button"
+                                                (click)="openDatePicker()">
+                                            📅
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="categoryCodeDisplay">Category Code</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="categoryCodeDisplay" 
+                                       formControlName="categoryCodeDisplay"
+                                       readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="categoryKey">Category Key</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="categoryKey" 
+                                       formControlName="categoryKey"
+                                       readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <p class="info-text">Displays Local Data for the specified site code (i.e. non enterprise wide)</p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" 
+                                    class="btn btn-danger btn-action">
+                                Continue
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

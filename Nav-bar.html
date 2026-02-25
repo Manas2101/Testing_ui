@@ -1,0 +1,50 @@
+<nav class="navigation">
+    <div class="container-fluid">
+        <div id="navDiv">
+            <div class="row">
+                <div class="col-12 nav-div">
+                    <ul class="nav">
+                        <li class="nav-item" *ngIf="!isReadonly">
+                            <a class="nav-link" [routerLink]="['/dashboard/dashboardScreen/']" [routerLinkActive]="['active']">Dashboard</a>
+                        </li>
+                        <li class="nav-item" *ngIf="isReadonly">
+                            <span class="nav-disabled">Dashboard</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/referencedata/referencedatasets/', {outlets:{
+                                'view':['manual'],
+                                'view2':['defaultfolder'],
+                                'view3':null
+                            }}]" [class.active]="isActive()">Reference data</a>
+                        </li>
+                        <li class="nav-item" *ngIf="isAdmin">
+                            <a class="nav-link" [routerLink]="['/managed-system']" [routerLinkActive]="['active']">Managed System</a>
+                        </li>
+                        <li class="nav-item" *ngIf="!isAdmin">
+                            <span class="nav-disabled">Managed System</span>
+                        </li>
+                        <li class="nav-item" *ngIf="isAdmin">
+                            <a class="nav-link" [routerLink]="['/administration/folderView/', {outlets:{
+                                'view':['manual'],
+                                'view2':['defaultfolder'],
+                                'view3':null
+                            }}]" [class.active]="isActiveAdmin()">Administration</a>
+                        </li>
+                        <li class="nav-item" *ngIf="!isAdmin">
+                            <span class="nav-disabled">Administration</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/searchlist/refinedSearch']" [routerLinkActive]="['active']" [class.disabled]="isDisabled('searchlist')">Refined Search</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/workflow']" [routerLinkActive]="['active']">Workflow Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/esr']" [routerLinkActive]="['active']">ESR</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

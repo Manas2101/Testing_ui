@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="navDiv">
+        <div class="row">
+            <div class="nav-div">
+                <div class="row">
+                    <div class="col-9">
+                        <label class="title">Workflow Details</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 content-div">
+            <div class="content">
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink [routerLink]="['/workflow']" RouterLinkActive="active">Reference data</a>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink [routerLink]="['/workflow/search-workflow']" RouterLinkActive="active" disabled>Workflow</a>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink [routerLink]="['/workflow/search-task']" RouterLinkActive="active" disabled>Tasks</a>
+                    </li>
+                  
+                </ul>
+                <div class="tab-content">
+                    <app-spinner></app-spinner>
+                    <div class="tab-c">
+                        <div class="container">
+                            <app-notification></app-notification>
+                        </div>
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
