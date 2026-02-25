@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="navDiv">
+        <div class="row">
+            <div class="nav-div">
+                <div class="row">
+                    <div class="col-9">
+                        <label class="title">ESR - Local Stores</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 content-div">
+            <div class="content">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/esr/category-data']" routerLinkActive="active">Category Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/esr/category-structure']" routerLinkActive="active">Category Structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/esr/grouping-data']" routerLinkActive="active">Grouping Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/esr/grouping-structure']" routerLinkActive="active">Grouping Structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/esr/default-site-code']" routerLinkActive="active">Default Site Code</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-c">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
