@@ -205,6 +205,31 @@
     .input-group-append {
         display: flex;
     }
+
+    .or-divider {
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #ddd;
+        }
+        
+        span {
+            background-color: #ffffff;
+            padding: 0 15px;
+            position: relative;
+            z-index: 1;
+            color: #666666;
+            font-size: 14px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
