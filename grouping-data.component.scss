@@ -1,18 +1,16 @@
-@import '../../../variables.scss';
-
 .esr-container {
-    background-color: $light-grey;
+    background-color: #f5f5f5;
     min-height: calc(100vh - 200px);
     padding: 20px;
 }
 
 .esr-header {
-    background-color: $white;
-    color: $charcoal;
+    background-color: #ffffff;
+    color: #333333;
     padding: 15px 20px;
     margin: -20px -20px 20px -20px;
     border-radius: 0;
-    border-bottom: 1px solid $border-grey;
+    border-bottom: 1px solid #ddd;
 }
 
 .esr-title {
@@ -20,25 +18,25 @@
     font-size: 20px;
     font-weight: 600;
     text-align: left;
-    color: $charcoal;
+    color: #333333;
 }
 
 .esr-content {
-    background: $white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-menu {
-    background: $white;
-    border: 1px solid $border-grey;
+    background: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 0;
     padding: 0;
     margin-right: 15px;
 
     .menu-section {
-        border-bottom: 1px solid $border-grey;
+        border-bottom: 1px solid #ddd;
 
         &:last-child {
             border-bottom: none;
@@ -46,8 +44,8 @@
     }
 
     .menu-header {
-        background-color: $dark-slate;
-        color: $white;
+        background-color: #2c3e50;
+        color: #ffffff;
         padding: 10px 15px;
         font-weight: 600;
         font-size: 13px;
@@ -61,7 +59,7 @@
 
     .menu-item {
         padding: 8px 15px;
-        border-bottom: 1px solid $light-grey;
+        border-bottom: 1px solid #f5f5f5;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -71,87 +69,87 @@
         }
 
         &:hover {
-            background-color: $light-grey;
+            background-color: #f5f5f5;
         }
 
         &.active {
-            background-color: $light-grey;
+            background-color: #f5f5f5;
         }
 
         .menu-arrow {
             margin-right: 8px;
-            color: $charcoal;
+            color: #333333;
             font-size: 12px;
         }
 
         a {
-            color: $charcoal;
+            color: #333333;
             text-decoration: none;
             flex: 1;
         }
     }
 
     .site-code-display {
-        background-color: $light-grey;
+        background-color: #f5f5f5;
         font-weight: bold;
         text-align: center;
         justify-content: center;
         padding: 15px;
-        border-top: 1px solid $border-grey;
+        border-top: 1px solid #ddd;
     }
 }
 
 .form-container {
-    background: $white;
+    background: #ffffff;
     padding: 20px;
-    border: 1px solid $border-grey;
+    border: 1px solid #ddd;
     border-radius: 4px;
 
     .form-group {
         label {
             font-weight: 600;
-            color: $charcoal;
+            color: #333333;
             margin-bottom: 5px;
             font-size: 14px;
         }
     }
 
     .form-control {
-        border: 1px solid $border-grey;
+        border: 1px solid #ddd;
         border-radius: 4px;
         padding: 8px 12px;
         font-size: 14px;
 
         &:focus {
-            border-color: $primary;
-            box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+            border-color: #db0011;
+            box-shadow: 0 0 0 0.2rem rgba(219, 0, 17, 0.25);
         }
     }
 
     .form-info {
-        background-color: $light-grey;
-        border: 1px solid $border-grey;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
         padding: 10px 15px;
         margin: 15px 0;
         border-radius: 0;
 
         .info-text {
             margin: 0;
-            color: $secondary-text;
+            color: #666666;
             font-size: 13px;
         }
     }
 
     .info-section {
-        background-color: $light-grey;
-        border: 1px solid $border-grey;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
         padding: 10px 15px;
         margin: 15px 0;
         border-radius: 0;
 
         .info-message {
             margin: 0;
-            color: $charcoal;
+            color: #333333;
             font-size: 13px;
             line-height: 1.5;
         }
@@ -171,36 +169,36 @@
         }
 
         .btn-danger {
-            background-color: $primary;
-            color: $white;
+            background-color: #db0011;
+            color: #ffffff;
 
             &:hover {
-                background-color: darken($primary, 10%);
+                background-color: #b00010;
             }
         }
 
         .btn-secondary {
-            background-color: $secondary-default;
-            color: $white;
+            background-color: #6c757d;
+            color: #ffffff;
 
             &:hover {
-                background-color: $secondary-hover;
+                background-color: #5a6268;
             }
         }
     }
 
     .date-format {
         font-size: 11px;
-        color: $secondary-text;
+        color: #666666;
         font-weight: normal;
     }
 
     .calendar-btn {
-        border: 1px solid $border-grey;
-        background-color: $light-grey;
+        border: 1px solid #ddd;
+        background-color: #f5f5f5;
 
         &:hover {
-            background-color: darken($light-grey, 5%);
+            background-color: #e8e8e8;
         }
     }
 

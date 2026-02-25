@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EsrViewComponent } from './esr-view.component';
 import { CategoryDataComponent } from './category-data.component';
+import { CategoryStructureComponent } from './category-structure.component';
+import { GroupingDataComponent } from './grouping-data.component';
+import { GroupingStructureComponent } from './grouping-structure.component';
 
 const routes: Routes = [
   {
@@ -19,15 +22,15 @@ const routes: Routes = [
       },
       {
         path: 'category-structure',
-        component: CategoryDataComponent
+        component: CategoryStructureComponent
       },
       {
         path: 'grouping-data',
-        component: CategoryDataComponent
+        component: GroupingDataComponent
       },
       {
         path: 'grouping-structure',
-        component: CategoryDataComponent
+        component: GroupingStructureComponent
       },
       {
         path: 'default-site-code',
